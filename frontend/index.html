@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lenny Growth Assistant</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/14.1.0/markdown-it.min.js"></script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">LGA</span>
+      <span class="brand-name">Lenny Growth Assistant</span>
+    </div>
+    <div class="topbar-controls">
+      <div class="provider-badge" id="providerBadge" title="Active model provider">
+        <span class="dot" id="providerDot"></span>
+        <span id="providerLabel">checking…</span>
+      </div>
+      <button class="btn-ghost" id="newSessionBtn">New chat</button>
+    </div>
+  </header>
+
+  <div id="providerBanner" class="banner hidden" role="alert"></div>
+
+  <main class="panes">
+    <section class="chat-pane" aria-label="Conversation">
+      <div class="chat-log" id="chatLog" role="log" aria-live="polite">
+        <div class="empty-state" id="emptyState">
+          <h1>Ask the podcast anything.</h1>
+          <p>Grounded strictly in Lenny's Podcast transcripts. Try:</p>
+          <div class="example-chips">
+            <button class="chip" data-example="What do guests say about finding product-market fit?">What do guests say about finding product-market fit?</button>
+            <button class="chip" data-example="Turn what you find on onboarding into a Ship 30 for 30 essay">Turn onboarding advice into a Ship 30 for 30 essay</button>
+            <button class="chip" data-example="Make a one-pager on pricing experiments">Make a one-pager on pricing experiments</button>
+          </div>
+        </div>
+      </div>
+      <form class="composer" id="composerForm">
+        <textarea id="composerInput" placeholder="Ask about product, growth, pricing, onboarding…" rows="1" aria-label="Message"></textarea>
+        <button type="submit" id="sendBtn" aria-label="Send">Send</button>
+      </form>
+    </section>
+
+    <aside class="artifact-pane" id="artifactPane" aria-label="Artifact viewer">
+      <div class="artifact-empty" id="artifactEmpty">
+        <p>Generated documents and HTML artifacts will appear here.</p>
+      </div>
+      <div class="artifact-content hidden" id="artifactContent">
+        <div class="artifact-header">
+          <div class="artifact-tabs" id="artifactTabs"></div>
+        </div>
+        <div class="artifact-body" id="artifactBody"></div>
+      </div>
+    </aside>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
