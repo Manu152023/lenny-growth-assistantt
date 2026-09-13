@@ -161,3 +161,5 @@ frontend/
   index.html, app.js, styles.css   Chat UI + Artifact Viewer (no build step)
 agent-transcripts/          AI-assisted build process log (see its own README)
 ```
+## Video Demo
+https://youtu.be/4-9N_tJHK80?si=cBE0tKTP1gbYKXLI
