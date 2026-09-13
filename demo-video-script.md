@@ -1,6 +1,6 @@
 # Demo video — script & checklist
 
-Target length: 2–3 minutes, camera on, uploaded to YouTube (per assignment §6.8). This is a
+Target length: 3-4 minutes, camera on, uploaded to YouTube (per assignment §6.8). This is a
 speaking outline, not a word-for-word script — say it in your own words.
 
 ## Before recording
